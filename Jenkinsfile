@@ -9,8 +9,6 @@ pipeline {
                     }
                 }
             }
-    }
-      stage('run allure reports') {
           steps {
               allure([includeProperties: true,
                                     jdk: '',
@@ -19,6 +17,6 @@ pipeline {
                                 results: [[path: '**/allure-results']]
               ])
           }
-      }
+    }
     }
 }
