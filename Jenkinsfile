@@ -10,5 +10,15 @@ pipeline {
                 }
             }
   }
+          stage('run allure reports') {
+              steps {
+                  allure([includeProperties: true,
+                                        jdk: '',
+                                 properties: [],
+                          reportBuildPolicy: 'ALWAYS',
+                                    results: [[path: '**/allure-results']]
+                  ])
+              }
+          }
 }
 }
