@@ -9,14 +9,14 @@ pipeline {
                     }
                 }
             }
-          steps {
-              allure([includeProperties: true,
+            steps {
+                allure([includeProperties: true,
                                     jdk: '',
                              properties: [],
                       reportBuildPolicy: 'ALWAYS',
                                 results: [[path: '**/allure-results']]
-              ])
+                ])
           }
     }
-    }
+  }
 }
